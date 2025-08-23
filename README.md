@@ -4,14 +4,13 @@ A personal portfolio website showcasing my skills, projects, and contact informa
 Built to share my work and connect with people interested in my journey as a developer.
 
 ## 🚀 Live Demo
-[View My Portfolio](https://your-username.github.io)  
+[View My Portfolio](https://atharvayadav25.github.io/)  
 (Replace the link above with your actual GitHub Pages URL)
 
 ## 🛠 Tech Stack
 - **HTML5** – structure
 - **CSS3** – styling and responsive design
 - **JavaScript** – interactivity
-- **Django (optional)** – if you used it for backend
 - Hosted on **GitHub Pages**
 
 ## 📂 Features
@@ -21,9 +20,10 @@ Built to share my work and connect with people interested in my journey as a dev
 - Contact section with ways to reach me
 
 ## 🖼 Screenshots
-(Add screenshots here if you want)
+<img width="1860" height="876" alt="image" src="https://github.com/user-attachments/assets/31b42010-20e5-4e91-95a1-7ebebf4c0d8c" />
+
 
 ## 📦 Installation & Usage
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   https://github.com/atharvayadav25/atharvayadav25.github.io.git
