@@ -1,13 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #0a0a0a;
+      color: #e0ffe0;
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background: #0d0d0d;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #003300;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      color: #00ff88;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #e0ffe0;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #00ff88;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 90vh;
+      text-align: center;
+      padding: 40px 10%;
+      background: linear-gradient(180deg, #0a0a0a, #001a00);
+    }
+    /* Bigger profile photo */
+    .hero img {
+      width: 260px;  /* Increased from 180px */
+      height: 260px; /* Increased from 180px */
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #00ff88;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px #00ff88;
+    }
+    .hero h2 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+      color: #00ff88;
+    }
+    .hero p {
+      max-width: 600px;
+      font-size: 1.1rem;
+      color: #c0ffc0;
+    }
+    
+    /* Skills Section */
+    .skills {
+      padding: 50px 10%;
+      background-color: #0f0f0f;
+      text-align: center;
+    }
+    .skills h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #00cc66;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .skills-list span {
+      background: #002200;
+      color: #b0e5b0;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: 1px solid #004400;
+      transition: transform 0.3s ease;
+    }
+    .skills-list span:hover {
+      transform: scale(1.05);
+      color: #00cc66;
+      border-color: #00cc66;
+    }
+    .projects {
+      padding: 60px 10%;
+      background-color: #0f0f0f;
+    }
+    .projects h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #00ff88;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: #001a00;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #003300;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px #00ff88;
+    }
+    .project-card h3 {
+      color: #00ff88;
+      margin-bottom: 10px;
+    }
+    .project-card p {
+      color: #c0ffc0;
+    }
+    .contact {
+      padding: 60px 10%;
+      text-align: center;
+      background: #0a0a0a;
+    }
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #00ff88;
+    }
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .contact-buttons a {
+      width: 50px;
+      height: 50px;
+      border: 2px solid #00ff88;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .contact-buttons a:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 15px #00ff88;
+    }
+    .contact-buttons a img {
+      width: 24px;
+      height: 24px;
+      filter: invert(60%) sepia(80%) saturate(500%) hue-rotate(100deg);
+      transition: filter 0.3s ease;
+    }
+    .contact-buttons a:hover img {
+      filter: invert(100%);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0d0d0d;
+      color: #444;
+      font-size: 0.9rem;
+      border-top: 1px solid #003300;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hi👋, I am Atharva</h1>
-    <h3>A computer science student, interested in tech, programming and AI</h3>
-   
+  <header>
+    <h1>Atharva Yadav</h1>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="my_pic_beach.jpg" alt="My Photo">
+    <h2>Hi👋, I'm Atharva</h2>
+    <br>
+    <br>
+    <p>Computer Science Student @TCET</p>
+    <p>"~Future engineer in the making."</p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>My Skills</h2>
+    <div class="skills-list">
+      <span>Git</span>
+      <span>JavaScript</span>
+      <span>Python</span>
+      <span>Django</span>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Realtime Chat App </h3>
+        <p>A live chat application built with Django and WebSockets for real-time messaging.(work in progress)</p>
+      </div>
+      <div class="project-card">
+        <h3>QR Code Generator</h3>
+        <p>A Python-based tool to generate customizable QR codes for URLs, text, and more.</p>
+      </div>
+      <div class="project-card">
+        <h3>flappy bird</h3>
+        <p>A fun python game with simple controls and collision logic.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-buttons">
+      <a href="https://github.com/atharvayadav25" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/atharva-yadav-605859319/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="https://www.instagram.com/atharva.yadav_25/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+      </a>
+    </div>
+    <br>
+
+    <h4 id="contact" class="contact-buttons">
+      “Building. Breaking. Learning. Repeat.”
+    </h4>
+  </section>
+
+  
+  
+
+  <footer>
+    © 2025 Atharva Yadav. All Rights Reserved.
+  </footer>
 </body>
 </html>
